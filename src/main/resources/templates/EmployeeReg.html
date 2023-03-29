@@ -1,0 +1,34 @@
+<html>
+<head style="background-color:powderblue;">Employee Registration</head>
+<body>
+<div>
+<form action="#" th:action="@{/saveEmployee}" th:object="${employee}" method="POST">
+<div class="input-group">
+				<input type="text" placeholder="Id" name="employeeId"  required>
+			</div> <br><br>
+			<div class="input-group">
+				<input type="text" placeholder=" Name" name="employeeName"  required>
+			</div> <br><br>
+			<div class="input-group">
+				<input type="text" placeholder="Age" name="employeeAge"  required>
+			</div> <br><br>
+			<div class="input-group">
+				<input type="text" placeholder="Sal" name="employeeSal"  required>
+			</div> <br><br>
+			<div class="input-group">
+				<input type="text" placeholder="Email" name="employeeEmail"  required>
+			</div> <br><br>
+			<div class="input-group">
+				<input type="text" placeholder="Phone no." name="employeePhone"  required>
+			</div> <br><br>
+			<div class="input-group">
+				<button name="submit" class="btn">save employee</button>
+			</div>
+</form>
+
+</div>
+
+
+</body>
+
+</html>

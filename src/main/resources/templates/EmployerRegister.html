@@ -1,0 +1,23 @@
+<html>
+<head>Employer Registration</head>
+<body>
+<div>
+<form action="#" th:action="@{/saveEmployer}" th:object="${Employer}" method="POST">
+<div class="input-group">
+				<input type="text" placeholder="Id" name="employerId"  required>
+			</div> <br><br>
+			<div class="input-group">
+				<input type="text" placeholder="Name" name="employerName"  required>
+			</div> <br><br>
+			
+			<div class="input-group">
+				<button name="submit" class="btn">Register as Employer</button>
+			</div>
+</form>
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+	
+	<head>
+		<title>List Employees</title>
+		
+		<link rel="stylesheet" 
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" 
+			integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" 
+			crossorigin="anonymous" />
+	</head>
+	
+	<body>
+		
+		<div class="container">
+		
+			<h3>Employee List</h3>
+			
+			<hr/>
+		
+			<table class="table table-bordered table-striped">
+			
+				<thead>
+					<tr>
+						<th>employeeId</th>
+						<th>employeeName</th>
+						<th>employeeAge</th>
+						<th>employeeEmail</th>
+						<th>employeeSal</th>
+						<th>employeePhone</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="Employee: ${empinfo}">
+						<td th:text="${employee.employeeId}" />
+						<td th:text="${employee.employeeName}" />
+						<td th:text="${employee.employeeAge}" />
+						<td th:text="${employee.employeeEmail}" />
+						<td th:text="${employee.employeeSal}" />
+						<td th:text="${employee.employeePhone}" />
+					</tr>
+				</tbody>
+				
+			</table>
+		</div>
+		<form action="#" th:action="@{/addEmployee}" method="GET">
+		<div class="input-group">
+				<button name="submit" class="btn">Add Employee</button>
+			</div>
+		</form><br><br>
+		
+		<form action="#" th:action="@{/deleteEmployee}" th:object="${employee}" method="GET">
+		<div class="input-group">
+				<input type="text" placeholder="Enter Employee Id to delete" name="employeeId"  required>
+			</div>
+		<div class="input-group">
+				<button name="submit" class="btn">Delete Employee</button>
+			</div>
+		</form>
+		
+		
+	</body>
+	
+</html>
